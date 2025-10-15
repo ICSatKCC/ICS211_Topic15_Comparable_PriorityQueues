@@ -1,4 +1,4 @@
-paka
+package comparable;
 /**
  * A comparable shopping item.
  * 

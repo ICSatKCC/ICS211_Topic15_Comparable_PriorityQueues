@@ -1,4 +1,4 @@
-package linkedlists;
+package orderedlinkedlist;
 
 /**
  * A generic interface for a list.

@@ -1,4 +1,4 @@
-package linkedlists;
+package orderedlinkedlist;
 
 public class ListDriver {
     /** A simple driver to test the SingleLinkedList implementation.

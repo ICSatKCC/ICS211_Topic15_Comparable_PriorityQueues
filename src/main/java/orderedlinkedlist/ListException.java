@@ -1,4 +1,4 @@
-package linkedlists;
+package orderedlinkedlist;
 
 /**
  * Exception thrown when an operation on a list is invalid.

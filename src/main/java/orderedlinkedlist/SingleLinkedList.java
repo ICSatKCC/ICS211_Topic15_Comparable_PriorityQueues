@@ -1,4 +1,4 @@
-package linkedlists;
+package orderedlinkedlist;
 
 import java.util.Iterator;
 import java.util.ListIterator;
@@ -17,9 +17,9 @@ import java.util.NoSuchElementException;
  */
 public class SingleLinkedList<T> implements List<T>, Iterable<T> {
     /** Reference to the first node in the linked list */
-    private SLLNode<T> head;  // points to first node in list
+    protected SLLNode<T> head;  // points to first node in list
     /** The current number of elements in the list */
-    private int size;         // number of elements in list
+    protected int size;         // number of elements in list
 
     /**
      * Constructs an empty singly linked list.

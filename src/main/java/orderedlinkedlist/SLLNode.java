@@ -1,4 +1,4 @@
-package linkedlists;
+package orderedlinkedlist;
 
 /**
  * A generic singly linked list node class that can store data of any type.

@@ -1,3 +1,4 @@
+package comparable;
 import java.util.*;
 public class Comparing {
    public static void main(String[] args) {

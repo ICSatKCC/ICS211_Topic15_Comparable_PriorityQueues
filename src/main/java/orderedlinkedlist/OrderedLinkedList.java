@@ -1,11 +1,12 @@
+package orderedlinkedlist;
 /**
  * A generic list of ordered linked nodes
- * 
+ * @author Lisa Miller
  * @author William McDaniel Albritton
  * @author Edoardo Biagioni
  */
 public class OrderedLinkedList<T extends Comparable<T>> extends
-		LinkedList<T> {
+		SingleLinkedList<T> {
 	/*
 	 * Explanation of above line of code: The class we are declaring is
 	 * parametrized on a type T which is a subclass of java.lang.Comparable<T>.
@@ -32,20 +33,20 @@ public class OrderedLinkedList<T extends Comparable<T>> extends
 		if (head == null) {
 			// list is empty, so add to beginning of list
 			// make new node and assign to head of list
-			head = new Node<T>(item, null);
+			head = new SLLNode<T>(item, null);
 		}
 		// if not empty list
 		else {
 			// case2: add to beginning of list
 			if (item.compareTo(head.getData()) <= 0) {
 				// add new node to list
-				head = new Node<T>(item, head);
+				head = new SLLNode<T>(item, head);
 			}
 			// case3: add to middle or end of list
 			else {
 				// start at 2nd node in list
-				Node<T> previous = head;
-				Node<T> current = head.getNext();
+				SLLNode<T> previous = head;
+				SLLNode<T> current = head.getNext();
 				// while not at end of list and item is greater than current
 				while (current != null && item.compareTo(current.getData()) > 0) {
 					// advance to current node
@@ -55,7 +56,7 @@ public class OrderedLinkedList<T extends Comparable<T>> extends
 				}
 				// add new node to list
 				// make new node that points to next node
-				Node<T> node = new Node<T>(item, current);
+				SLLNode<T> node = new SLLNode<T>(item, current);
 				// point previous node to new node
 				previous.setNext(node);
 			}

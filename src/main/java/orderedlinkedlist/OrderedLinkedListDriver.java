@@ -1,4 +1,6 @@
+package orderedlinkedlist;
 import java.util.PriorityQueue;
+import comparable.ComparableItem;
 /**
  * A driver for the generic list of ordered linked nodes
  * 
@@ -17,7 +19,7 @@ public class OrderedLinkedListDriver{
 	public static void main(String[] args) {
 		// test list of Strings
 		String name = new String("Nami");
-		ListInterface<String> stringList = new OrderedLinkedList<String>();
+		List<String> stringList = new OrderedLinkedList<String>();
 		stringList.add(name);
 		name = new String("Kai");
 		stringList.add(name);
@@ -28,7 +30,7 @@ public class OrderedLinkedListDriver{
 		System.out.println(stringList + "\n");
 
 		// test constructor
-		ListInterface<ComparableItem> list = new OrderedLinkedList<ComparableItem>();
+		List<ComparableItem> list = new OrderedLinkedList<ComparableItem>();
 		System.out.println(list + "\n");
       
       PriorityQueue <ComparableItem> pq = new PriorityQueue<>();
@@ -66,7 +68,7 @@ public class OrderedLinkedListDriver{
       System.out.println(pq + "\n");
 
 		// test remove
-		list.remove(6);
+		list.remove(list.size() - 1);
 		System.out.println(list + "\n");
 		list.remove(3);
 		System.out.println(list + "\n");
@@ -77,6 +79,7 @@ public class OrderedLinkedListDriver{
 		try {
 			list.remove(50);
 		} catch (ListException exception) {
+			System.out.println("Correctly caught remove exception for position 50:");
 			System.out.println(exception);
 		}
 	}// end of main()

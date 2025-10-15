@@ -1,3 +1,4 @@
+package comparable;
 /**
  * Represents a grocery item
  * 

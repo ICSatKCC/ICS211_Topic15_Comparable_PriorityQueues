@@ -1,9 +1,10 @@
 package comparable;
+
 /**
  * A comparable shopping item.
  * 
  * @author William McDaniel Albritton
- * @author Edoardo Biagionii 
+ * @author Edoardo Biagionii
  */
 public class ComparableItem extends Item implements Comparable<ComparableItem> {
 	/*
@@ -21,9 +22,9 @@ public class ComparableItem extends Item implements Comparable<ComparableItem> {
 	 * Initializes respective data fields.
 	 * 
 	 * @param name
-	 *            is the item's name
+	 *              is the item's name
 	 * @param count
-	 *            is the item's count
+	 *              is the item's count
 	 */
 	public ComparableItem(String name, Integer count) {
 		super(name, count); // calls Item's constructor
@@ -33,10 +34,10 @@ public class ComparableItem extends Item implements Comparable<ComparableItem> {
 	 * Compares a ComparableItem to another ComparableItem.
 	 * 
 	 * @param item
-	 *            A second ComparableItem
-    * @return A negative integer, zero, or a positive integer if this 
-    *    object is less than, equal to, or greater than the specified object.
-
+	 *             A second ComparableItem
+	 * @return A negative integer, zero, or a positive integer if this
+	 *         object is less than, equal to, or greater than the specified object.
+	 * 
 	 */
 	public int compareTo(ComparableItem item) {
 		// convert names to lowercase
@@ -47,18 +48,15 @@ public class ComparableItem extends Item implements Comparable<ComparableItem> {
 		int result = name1.compareTo(name2);
 		return result;
 	}
-   
-   
-   public static void main(String[] args) {
-      ComparableItem item1 = new ComparableItem("papaya", 2);
-      ComparableItem item2 = new ComparableItem("apple", 7);
-      
-      System.out.println(item1.compareTo(item2));
-      System.out.println(item2.compareTo(item1));
-      System.out.println(item1.compareTo(item1));
-   
-   }
+
+	public static void main(String[] args) {
+		ComparableItem item1 = new ComparableItem("papaya", 2);
+		ComparableItem item2 = new ComparableItem("apple", 7);
+
+		System.out.println(item1.compareTo(item2));
+		System.out.println(item2.compareTo(item1));
+		System.out.println(item1.compareTo(item1));
+
+	}
 
 } // end class definition
-
-

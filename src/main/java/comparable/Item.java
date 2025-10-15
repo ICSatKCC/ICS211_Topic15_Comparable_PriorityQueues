@@ -1,4 +1,5 @@
 package comparable;
+
 /**
  * Represents a grocery item
  * 
@@ -15,11 +16,11 @@ public class Item {
 	 * Initializes respective data fields
 	 * 
 	 * @param itemName
-	 *            is the item's name
+	 *                   is the item's name
 	 * @param itemNumber
-	 *            is the item's number
+	 *                   is the item's number
 	 * @exception ItemException
-	 *                if itemNumber is less than 1 (one)
+	 *                          if itemNumber is less than 1 (one)
 	 */
 	public Item(String itemName, Integer itemNumber) throws ItemException {
 		// cannot have 0 or negative number of items
@@ -47,9 +48,9 @@ public class Item {
 	 * This Is A "Mutator" Method - Used To Set A Data Field.
 	 * 
 	 * @param itemNumber
-	 *            is the item's number
+	 *                   is the item's number
 	 * @exception ItemException
-	 *                if itemNumber is less than 1 (one)
+	 *                          if itemNumber is less than 1 (one)
 	 */
 	public void setNumber(Integer itemNumber) throws ItemException {
 		// cannot have 0 or negative number of items
@@ -82,7 +83,7 @@ public class Item {
 	 * Method main is used as a driver to test the class
 	 * 
 	 * @param args
-	 *            Not used
+	 *             Not used
 	 */
 	public static void main(String[] args) {
 		// test constructors and toString() method
@@ -124,7 +125,7 @@ public class Item {
 class ItemException extends RuntimeException {
 	/**
 	 * @param message
-	 *            describes the exact cause of the error.
+	 *                describes the exact cause of the error.
 	 */
 	public ItemException(String message) {
 		super(message);
@@ -134,12 +135,12 @@ class ItemException extends RuntimeException {
 // *************************************************************************
 
 /*
- * PROGRAM OUTPUT: 
-bag of rice, 81
-bananas, 10
-bananas, 999
-ItemException: Cannot have less than 1 item.
-bananas, 999
-ItemException: Cannot have less than 1 item.
-bananas, 999
+ * PROGRAM OUTPUT:
+ * bag of rice, 81
+ * bananas, 10
+ * bananas, 999
+ * ItemException: Cannot have less than 1 item.
+ * bananas, 999
+ * ItemException: Cannot have less than 1 item.
+ * bananas, 999
  */
